@@ -40,40 +40,26 @@ from sklearn.preprocessing import StandardScaler
 df=pd.read_csv('/content/50_Startups.csv')
 df.info()
 ```
-
 ![image](https://github.com/user-attachments/assets/70a22dbb-3ae2-4165-99ed-91c92d495884)
-
 ```c
-
 df.head()
 ```
-
 ![image](https://github.com/user-attachments/assets/f33aecd8-ea50-4a51-a259-b828a4d8b0b1)
-
 ```c
-
 df.tail()
-
 ```
-
 ![image](https://github.com/user-attachments/assets/b4328aad-f3ce-4849-af79-b9b962edcc64)
-
 ```c
 x = (df.iloc[:, :-2].values)
 y = (df.iloc[:, -1].values).reshape(-1,1)
 print(x)
 ```
-
 ![image](https://github.com/user-attachments/assets/368bb892-ebce-419f-8014-17abbc1d7cda)
-
 ```c
 print(y)
 ```
-
 ![image](https://github.com/user-attachments/assets/f0cf87b5-ae2a-4979-bea2-b1ac75c82190)
-
 ```c
-
 scaler = StandardScaler()
 x1=x.astype(float)
 x1_scaled= scaler.fit_transform(x)
@@ -84,14 +70,11 @@ print(y1_scaled)
 ![image](https://github.com/user-attachments/assets/b6692819-46fd-4dcb-985e-b19609605a12)
 
 ![image](https://github.com/user-attachments/assets/ca969907-4e46-4acc-9dd7-8f098e02449e)
-
 ```c
 theta=multivariate_linear_regression(x1_scaled,y1_scaled)
 print(theta)
 ```
-
 ![image](https://github.com/user-attachments/assets/0a53c54e-25c5-4a5e-98b3-7ffa2b863f79)
-
 ```c
 new_data=np.array([165349.2,136897.8,471784.1]).reshape(-1,1)
 new_Scaled=scaler.fit_transform(new_data)
@@ -100,9 +83,6 @@ prediction=prediction.reshape(-1,1)
 pre=scaler.inverse_transform(prediction)
 print(f"Predicted value:{pre}")
 ```
-
 ![image](https://github.com/user-attachments/assets/eb003e10-9a64-493a-a2b6-48e24ce5955d)
-
-
 ## Result:
 Thus the program to implement the linear regression using gradient descent is written and verified using python programming.
